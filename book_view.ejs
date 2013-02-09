@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title><%-title %></title>
+    <style type="text/css">
+        .cites td{
+            width:6em;
+            white-space:nowrap;
+            overflow:hidden;
+        }
+    </style>
+</head>
+<body>
+    <h1><%-name %></h1>
+    <a href="access???key=<%-key %>">アクセス</a>
+    <img src="<%-image_address %>" />
+    <table>
+        <tr><td><%-shop %></td></tr>
+        <tr><td><%-author %></td></tr>
+        <tr><td><%-publisher %></td></tr>
+        <tr><td><%-price %></td></tr>
+        <tr><td><input type="button" value="立ち読み可" <%-free  %> /> <input type="button" value="購入" onclick="location.href='http://<%-buy_address %>'"/></td></tr>
+        <tr><td><%-preview %></td></tr>
+    </table>
+    紙本
+    <table class="cites">
+        <tr>
+            <%-books %>
+        </tr>
+    </table>
+    電子書籍
+    <table class="cites">
+        <tr>
+            <%-ebooks %>
+        </tr>
+    </table>
+    おすすめ
+    <table class="cites">
+        <tr>
+            <%-recommend %>
+        </tr>
+    </table>
+</body>
+</html>

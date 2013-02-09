@@ -1,0 +1,63 @@
+﻿<html>
+    <head>
+        <title></title>
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+        <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+        <script src="jquery.cookie.js"></script>
+    </head>
+    <body style="background-color:#0ff">
+        <div data-role="header"></div>
+        <div data-role="content">
+            <form method="post" action="register2">
+                <input type="hidden" name="key" value="<%-key %>" />
+                <table>
+                    <tr>
+                        <td>mail</td>
+                        <td><%-mail %><input type="hidden" name="mail" value="<%-mail2 %>" /></label></td>
+                    </tr>
+                    <tr>
+                        <td>password</td>
+                        <td><input type="password" name="password" value=""/></td>
+                    </tr>
+                    <tr>
+                        <td>password(c)</td>
+                        <td><input type="password"  value=""/></td>
+                    </tr>
+                    <tr>
+                        <td>user_id</td>
+                        <td><input type="text" name="user_id" value="<%-user_id %>"/></td>
+                    </tr>
+                    <tr>
+                        <td>full_name</td>
+                        <td><input type="text" name="full_name" value="<%-full_name %>"/></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="text-align:center"><input type="submit" value="登録" onclick="submit()"/></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </body>
+    <script type="text/javascript">
+        function submit() {
+            $.cookie('mail', document.getElementById('mail').value);
+        }
+        var text = "";
+        setInterval(function () {
+            var text2 = document.getElementById("nick_name").value;
+            if (text != text2) {
+                text = text2;
+                $.ajax({
+                    type: "POST",
+                    url: "check_nick_name",
+                    dataType: 'json',
+                    data: { nick_name: text },
+                    success: function (data) {
+                    }
+                });
+            }
+            text2 = document.getElementById("nick_name").value;
+        }, 1000);
+    </script>
+</html>

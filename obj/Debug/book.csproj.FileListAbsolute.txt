@@ -1,0 +1,5 @@
+c:\users\yasu\documents\visual studio 11\Projects\book\book\bin\Debug\book.exe.config
+C:\Users\yasu\Desktop\Projects\book\book\bin\Debug\book.exe.config
+C:\Users\yasu\Desktop\Projects\book\book\obj\Debug\book.csprojResolveAssemblyReference.cache
+C:\Users\yasutako\Desktop\Projects\book\book\bin\Debug\book.exe.config
+C:\Users\yasutako\Desktop\Projects\book\book\obj\Debug\book.csprojResolveAssemblyReference.cache

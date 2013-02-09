@@ -1,0 +1,8 @@
+MongoDB 2.2 database added.  Please make note of these credentials:
+
+       Root User: admin
+   Root Password: R3-TRQSrdU4I
+   Database Name: book
+
+Connection URL: mongodb://$OPENSHIFT_MONGODB_DB_HOST:$OPENSHIFT_MONGODB_DB_PORT/
+MongoDB gear-local connection URL: mongodb://$OPENSHIFT_MONGODB_DB_HOST:$OPENSHIFT_MONGODB_DB_PORT/
